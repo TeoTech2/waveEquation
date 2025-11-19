@@ -1,10 +1,10 @@
 # 2D Euler-Bernoulli Biharmonic Wave Equation Solver
 
-A numerical solution for the biharmonic wave equation using finite difference methods in Python.
+A numerical solution for the biharmonic wave equation using finite difference methods in Mathematica.
 
 ## Overview
 
-This notebook solves the **2D Euler-Bernoulli biharmonic wave equation**, which models the vibration of thin plates and beams. The biharmonic equation is a fourth-order partial differential equation that appears in elasticity theory and structural mechanics.
+This notebook solves the Biharmonic wave equation, which models the vibration of thin plates and beams. The biharmonic equation is a fourth-order partial differential equation. 
 
 ## Mathematical Formulation
 
