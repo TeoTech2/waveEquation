@@ -62,6 +62,17 @@ where:
 Initial velocity is typically set to zero:
 $$\frac{\partial u}{\partial t}(x, y, 0) = 0$$
 
+
+https://github.com/user-attachments/assets/c514439c-c701-4b79-bc67-cf36bcbfc111
+
+
+
+https://github.com/user-attachments/assets/9e61a308-4774-4dd7-9bae-064bbfb1f766
+
+
+https://github.com/user-attachments/assets/5837cf40-9c15-414c-b5f2-cb96bbb94266
+
+
 ## License
 
 MIT License - Feel free to use and modify for your research and applications.
