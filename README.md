@@ -1,4 +1,4 @@
-# 2D Euler-Bernoulli Biharmonic Wave Equation Solver
+# Biharmonic Wave Equation in Mathematica
 
 A numerical solution for the biharmonic wave equation using finite difference methods in Mathematica.
 
@@ -29,6 +29,8 @@ This equation describes:
 - Vibrations of thin elastic plates
 
 The biharmonic operator accounts for bending stiffness, making this equation more physically realistic than the standard wave equation for thin structures.
+
+<img width="379" height="253" alt="Screenshot 2025-11-19 at 11 58 28" src="https://github.com/user-attachments/assets/25987de4-ec21-4560-9605-3458674c0ef6" />
 
 ## Numerical Method
 
