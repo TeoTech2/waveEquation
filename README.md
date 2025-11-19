@@ -48,14 +48,6 @@ The solution uses a **finite difference method** on a uniform grid:
 
 ### Finite Difference Approximations
 
-**Biharmonic Operator (4th order spatial derivatives):**
-
-For the $x$-direction fourth derivative:
-$$\frac{\partial^4 u}{\partial x^4} \approx \frac{u_{i-2,j} - 4u_{i-1,j} + 6u_{i,j} - 4u_{i+1,j} + u_{i+2,j}}{\Delta x^4}$$
-
-For the mixed derivative:
-$$\frac{\partial^4 u}{\partial x^2 \partial y^2} \approx \frac{1}{\Delta x^2 \Delta y^2}[u_{i-1,j-1} - 2u_{i-1,j} + u_{i-1,j+1} - 2u_{i,j-1} + 4u_{i,j} - 2u_{i,j+1} + u_{i+1,j-1} - 2u_{i+1,j} + u_{i+1,j+1}]$$
-
 ### Initial Conditions
 
 The notebook implements a **Gaussian initial displacement**:
