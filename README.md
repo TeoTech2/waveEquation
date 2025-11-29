@@ -1,3 +1,5 @@
+How does one implement the Finite Elements Method for solving the wave equation and biharmonic equation numerically?
+
 # Biharmonic Wave Equation in Mathematica
 
 A numerical solution for the biharmonic wave equation using finite difference methods in Mathematica.
@@ -7,6 +9,22 @@ A numerical solution for the biharmonic wave equation using finite difference me
 This notebook solves the Biharmonic wave equation, which models the vibration of thin plates and beams. The biharmonic equation is a fourth-order partial differential equation. 
 
 ## Mathematical Formulation
+
+We guess that the solution $U(x,y)$ is a sum of basis functions:
+
+\begin{equation}
+U = \sum_{i,j} U_{i,j} N_{i,j} \tag{Sum of Basis Functions}
+\end{equation}
+
+Given the wave equation, we isolate the term $\nabla^2 U = -F$. Integrating both sides against basis functions $\nu = N_{i,j}$, we find
+$$\left( \sum_{k,l} \int_{[0,1]\times[0,1]} \nabla N_{i,j} \cdot \nabla N_{k,l} dA \right) U_{k,l} = - \int_{[0,1]\times[0,1]} F(x,y) N_{i,j} dA$$
+
+We integrate and solve for $U_{i,j}$, and time propagate using the \emph{Finite Difference Method} for $\frac{\partial^2}{\partial t^2}$.
+\end{frame}
+
+\begin{frame}{Basis functions}
+
+$$N_{i,j}(x,y) = N_{i}(x) N_{j}(y) \qquad N_j(x)= \begin{cases} \dfrac{x - x_{j-1}}{x_j - x_{j-1}}, & x_{j-1} \le x \le x_j, \\[8pt] \dfrac{x_{j+1} - x}{x_{j+1} - x_j}, & x_j \le x \le x_{j+1}, \\[8pt] 0, & \text{otherwise.} \end{cases}$$
 
 ### The Biharmonic Wave Equation
 
@@ -54,19 +72,11 @@ The solution uses a **finite difference method** on a uniform grid:
 
 The notebook implements a **Gaussian initial displacement**:
 
-$$u(x, y, 0) = A \exp\left(-\frac{(x-x_0)^2 + (y-y_0)^2}{2\sigma^2}\right)$$
-
-where:
-- $A$ is the amplitude
-- $(x_0, y_0)$ is the center position
-- $\sigma$ is the standard deviation (width)
-
 Initial velocity is typically set to zero:
 $$\frac{\partial u}{\partial t}(x, y, 0) = 0$$
 
 
 https://github.com/user-attachments/assets/c514439c-c701-4b79-bc67-cf36bcbfc111
-
 
 
 https://github.com/user-attachments/assets/9e61a308-4774-4dd7-9bae-064bbfb1f766
