@@ -12,16 +12,15 @@ This notebook solves the Biharmonic wave equation, which models the vibration of
 
 We guess that the solution $U(x,y)$ is a sum of basis functions:
 
-
-$$U = \sum_{i,j} U_{i,j} N_{i,j} \tag{Sum of Basis Functions} $$
+$$U = \sum_{i,j} U_{i,j} N_{i,j}$$
 
 Given the wave equation, we isolate the term $\nabla^2 U = -F$. Integrating both sides against basis functions $\nu = N_{i,j}$, we find
 
 $$\left( \sum_{k,l} \int_{[0,1]\times[0,1]} \nabla N_{i,j} \cdot \nabla N_{k,l} dA \right) U_{k,l} = - \int_{[0,1]\times[0,1]} F(x,y) N_{i,j} dA$$
 
-We integrate and solve for $U_{i,j}$, and time propagate using the \emph{Finite Difference Method} for $\frac{\partial^2}{\partial t^2}$.
+We integrate and solve for $U_{i,j}$, and time propagate using the *Finite Difference Method* for $\frac{\partial^2}{\partial t^2}$.
 
-$$N_{i,j}(x,y) = N_{i}(x) N_{j}(y) \qquad N_j(x)= \begin{cases} \dfrac{x - x_{j-1}}{x_j - x_{j-1}}, & x_{j-1} \le x \le x_j, \\[8pt] \dfrac{x_{j+1} - x}{x_{j+1} - x_j}, & x_j \le x \le x_{j+1}, \\[8pt] 0, & \text{otherwise.} \end{cases}$$
+$$N_{i,j}(x,y) = N_{i}(x) N_{j}(y) \quad N_j(x)= \begin{cases} \frac{x - x_{j-1}}{x_j - x_{j-1}}, & x_{j-1} \le x \le x_j, \\ \frac{x_{j+1} - x}{x_{j+1} - x_j}, & x_j \le x \le x_{j+1}, \\ 0, & \text{otherwise.} \end{cases}$$
 
 ### The Biharmonic Wave Equation
 
